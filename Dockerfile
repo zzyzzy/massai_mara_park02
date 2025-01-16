@@ -4,11 +4,11 @@ FROM maven:3.9.9-amazoncorretto-17-alpine AS build
 WORKDIR /app
 
 # 종속성 다운로드
-COPY pom.xml /app
+COPY pom.xml .
 RUN mvn dependency:go-offline -B
 
 # 소스 복사 및 빌드
-COPY src /app
+COPY src ./src
 RUN mvn package -DskipTests
 
 # 실행 스테이지

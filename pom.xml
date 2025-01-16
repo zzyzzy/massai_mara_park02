@@ -28,7 +28,6 @@
     </scm>
     <properties>
         <java.version>17</java.version>
-        <start-class>zzyzzy.spring.massai_mara_park.MassaiMaraParkApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
@@ -81,18 +80,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>zzyzzy.spring.massai_mara_park.MassaiMaraParkApplication</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
         </plugins>
     </build>
